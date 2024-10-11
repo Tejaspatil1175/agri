@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AgriWorld | Agriculture Information Hub</title>
+    >
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg" style="background-color: #35505d;">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="pngwing.com.png" alt="AgriWorld Logo" width="40" height="40" class="d-inline-block align-text-top"> 
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#" style="color: #fff;">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color: #fff;">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #fff;">
+                        Dropdown
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">About Us</a></li>
+                        <li><a class="dropdown-item" href="#">Contact</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Links</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="d-flex" role="search" onsubmit="return handleSearch(event)">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="width: 150px;"> <!-- Adjust width for smaller screens -->
+                <button class="btn btn-outline-light" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+
+<div class="content container">
+    <section id="home" onclick="changeSectionColor(this)">
+        <img src="knowlege.jpg" alt="Empowering Farmers">
+        <h2>Empowering Farmers with Knowledge</h2>
+        <p>We provide vital information to help farmers grow their crops successfully.</p>
+    </section>
+
+    <section id="weather" onclick="changeSectionColor(this)">
+        <img src="unnamed.jpg" alt="Weather Forecast">
+        <h2>Weather Forecast</h2>
+        <p>Stay updated with the latest weather to make informed farming decisions.</p>
+    </section>
+
+    <section id="about" onclick="changeSectionColor(this)">
+        <img src="images.jpeg" alt="About Us">
+        <h2>About Us</h2>
+        <p>We are dedicated to helping farmers by offering reliable agricultural products and services.</p>
+    </section>
+
+    <section id="products" onclick="changeSectionColor(this)">
+        <img src="farm-product.png" alt="Our Products">
+        <h2>Buy Our Products</h2>
+        <p>Discover a wide range of organic seeds, fertilizers, and farming tools.</p>
+    </section>
+
+    <section id="vegetables" onclick="changeSectionColor(this)">
+        <img src="vegetables.webp" alt="Vegetable Farming Information">
+        <h2>Vegetable Farming Information</h2>
+        <p>Learn how to cultivate various vegetables, from sowing to harvesting.</p>
+    </section>
+</div>
+
+
+<footer>
+    <p>&copy; 2024 AgriWorld. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
