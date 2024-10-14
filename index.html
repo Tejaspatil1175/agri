@@ -3,52 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>AgriWorld | Agriculture Information Hub</title>
 
-    <!-- Bootstrap for CSS and JavaScript -->
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css"> 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js" defer></script>
+    <style>
+        /* Ensure the image scales nicely on all screens */
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        .img {
+            width: 100%;
+            max-width: 1200px;
+            height: auto;
+            border: 4px solid #DD9F8C;
+            border-radius: 30px;
+            box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .welcome-section {
+            text-align: center;
+            padding: 2em;
+            background-color: #f0f8ff;
+            border-radius: 20px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .welcome-heading {
+            font-family: 'Bree Serif', serif;
+            font-size: 36px;
+            color: #4CAF50;
+            margin-bottom: 0.2em;
+        }
+
+        .welcome-text {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .welcome-heading {
+                font-size: 28px;
+            }
+            .welcome-text {
+                font-size: 16px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-
+<!-- Navbar -->
 <nav class="navbar bg-body-tertiary fixed-top">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">AgriWorld</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas offcanvas-end" id="offcanvasNavbar">
             <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                <h5 class="offcanvas-title">Menu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
             </div>
             <div class="offcanvas-body">
-                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="weather.html">Weather</a>
-                    </li>
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="weather.html">Weather</a></li>
+                    <li class="nav-item"><a class="nav-link" href="youtube.html">YouTube Videos</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            More
-                        </a>
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">More</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Products</a></li>
-                            <li><a class="dropdown-item" href="#">About Us</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
+                            <li><a class="dropdown-item" href="dumy.html">About Us</a></li>
+                            <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="#">Contact</a></li>
                         </ul>
                     </li>
                 </ul>
-                <form class="d-flex mt-3" role="search" onsubmit="return handleSearch(event)">
+                <form class="d-flex mt-3" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
@@ -57,12 +101,30 @@
     </div>
 </nav>
 
+<!-- Image Section -->
+<div class="image-container">
+    <img class="img" src="header-compress.png" alt="AgriWorld Banner">
+</div>
 
+<!-- Welcome Section -->
+<div class="welcome-section">
+    <h2 class="welcome-heading">अ‍ॅग्रीवर्ल्डमध्ये आपले स्वागत आहे!</h2><!-- Welcome to AgriWorld!-->
+    <p class="welcome-text">
+        आग्रोवर्ल्डमध्ये, आम्ही शेतकऱ्यांना अधिक चांगले निर्णय घेण्यासाठी आवश्यक ज्ञान, साधने आणि अंतर्दृष्टी प्रदान करून सक्षम बनवतो.
+        आमच्या प्लॅटफॉर्मवर हवामानाच्या अद्यतनांपासून शेतीच्या टिप्स आणि शाश्वत शेती पद्धतींवर माहिती मिळवा.
+        चला, एकत्र येऊन हरित भविष्याची वाटचाल करूया!<!--  At AgriWorld, we empower farmers with the knowledge, tools, and insights needed to make better decisions.  
+        Explore our platform to access weather updates, agricultural tips, and sustainable farming practices.
+        Let's grow together for a greener future!-->
+    </p>
+</div>
 <div class="content container mt-5 pt-5">
     <section id="home" onclick="changeSectionColor(this)">
         <img src="knowlege.jpg" alt="शेतकऱ्यांना ज्ञान देणे"><!-- Empowering Farmers -->
         <h2>ज्ञानाने शेतकऱ्यांचे सक्षमीकरण</h2><!-- Empowering Farmers with Knowledge -->
-        <p>आम्ही शेतकऱ्यांना यशस्वीपणे पीक पिकवण्यासाठी आवश्यक माहिती, साधने आणि संसाधने प्रदान करतो. आमचे उद्दिष्ट शाश्वत शेती पद्धतींना पाठिंबा देणे आहे आणि ताज्या हवामानाचा अंदाज उपलब्ध करून देणे.</p><!-- We provide essential information, tools, and resources to empower farmers in growing their crops successfully. Our goal is to support sustainable farming practices by offering up-to-date weather forecasts. -->
+        
+    <p>आम्ही शेतकऱ्यांना यशस्वीपणे पीक पिकवण्यासाठी आवश्यक माहिती, साधने आणि संसाधने प्रदान करतो. आमचे उद्दिष्ट शाश्वत शेती पद्धतींना पाठिंबा देणे आहे आणि ताज्या हवामानाचा अंदाज उपलब्ध करून देणे.</p><!-- We provide essential information, tools, and resources to empower farmers in growing their crops successfully. Our goal is to support sustainable farming practices by offering up-to-date weather forecasts. -->
+
+    <a href="youtube.html" target="_blank" class="btn btn-primary mt-2">learn more</a>
     </section>
 
     <section id="weather" onclick="changeSectionColor(this)">
@@ -85,8 +147,8 @@
     </section>
 </div>
 
-
-<footer class="text-center py-3">
+<!-- Footer -->
+<footer class="text-center py-3 mt-5">
     <p>&copy; 2024 AgriWorld. All Rights Reserved.</p>
 </footer>
 
